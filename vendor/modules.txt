@@ -1316,8 +1316,8 @@ github.com/orcaman/concurrent-map
 # github.com/owncloud/libre-graph-api-go v1.0.5-0.20260216101009-eeac018af245
 ## explicit; go 1.18
 github.com/owncloud/libre-graph-api-go
-# github.com/owncloud/reva/v2 v2.0.0-20260324082555-823c2f1c2593
-## explicit; go 1.24.0
+# github.com/owncloud/reva/v2 v2.0.0-20260324082555-823c2f1c2593 => ../reva
+## explicit; go 1.25.0
 github.com/owncloud/reva/v2/cmd/revad/internal/grace
 github.com/owncloud/reva/v2/cmd/revad/runtime
 github.com/owncloud/reva/v2/internal/grpc/interceptors/appctx
@@ -1325,7 +1325,6 @@ github.com/owncloud/reva/v2/internal/grpc/interceptors/auth
 github.com/owncloud/reva/v2/internal/grpc/interceptors/eventsmiddleware
 github.com/owncloud/reva/v2/internal/grpc/interceptors/loader
 github.com/owncloud/reva/v2/internal/grpc/interceptors/log
-github.com/owncloud/reva/v2/internal/grpc/interceptors/metadata
 github.com/owncloud/reva/v2/internal/grpc/interceptors/prometheus
 github.com/owncloud/reva/v2/internal/grpc/interceptors/readonly
 github.com/owncloud/reva/v2/internal/grpc/interceptors/recovery
@@ -1444,6 +1443,7 @@ github.com/owncloud/reva/v2/pkg/auth/registry/loader
 github.com/owncloud/reva/v2/pkg/auth/registry/registry
 github.com/owncloud/reva/v2/pkg/auth/registry/static
 github.com/owncloud/reva/v2/pkg/auth/scope
+github.com/owncloud/reva/v2/pkg/autoprop
 github.com/owncloud/reva/v2/pkg/bytesize
 github.com/owncloud/reva/v2/pkg/cbox/favorite/sql
 github.com/owncloud/reva/v2/pkg/cbox/group/rest
@@ -2568,3 +2568,4 @@ stash.kopano.io/kgol/rndm
 # github.com/unrolled/secure => github.com/DeepDiver1975/secure v0.0.0-20240611112133-abc838fb797c
 # github.com/go-micro/plugins/v4/store/nats-js-kv => github.com/kobergj/plugins/v4/store/nats-js-kv v0.0.0-20240807130109-f62bb67e8c90
 # go-micro.dev/v4 => github.com/kobergj/go-micro/v4 v4.0.0-20250610135441-d0b187215699
+# github.com/owncloud/reva/v2 => ../reva
