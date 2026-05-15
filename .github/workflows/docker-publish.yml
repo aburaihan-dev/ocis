@@ -18,8 +18,21 @@ jobs:
       packages: write
 
     steps:
-      - name: Checkout
+      - name: Checkout patch repo
         uses: actions/checkout@v4
+        with:
+          path: patch
+
+      - name: Clone upstream oCIS v8.0.3
+        run: |
+          git clone --depth=1 --branch v8.0.3 \
+            https://github.com/owncloud/ocis.git upstream
+
+      - name: Apply HEIC/HEIF patches
+        run: |
+          cp patch/services/thumbnails/pkg/thumbnail/thumbnail.go \
+             upstream/services/thumbnails/pkg/thumbnail/thumbnail.go
+          cp patch/Dockerfile upstream/Dockerfile
 
       - name: Set up QEMU (ARM64 emulation)
         uses: docker/setup-qemu-action@v3
@@ -48,8 +61,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: Dockerfile
+          context: upstream
+          file: upstream/Dockerfile
           platforms: linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
